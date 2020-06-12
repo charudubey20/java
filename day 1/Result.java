@@ -1,4 +1,5 @@
-//Using if…….else if….  Else,  display whether result is  fail, pass, second class , first class, Distinction etc.  
+//Using if…….else if….  Else,  display whether result is  fail, pass, second class , first class, Distinction etc.
+
 
 
 class Result
