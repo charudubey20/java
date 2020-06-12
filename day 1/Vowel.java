@@ -1,6 +1,7 @@
 //using switch ….case   display whether character is vowel or not.
 
 
+
 public class Vowel
 {
   public static void main(String[] args)
