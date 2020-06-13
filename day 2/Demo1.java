@@ -5,46 +5,92 @@ Also put static initializer or block inside "Demo" class and see what happens.
 ______________________________________________________________________________________________*/
 
 
-class A1
+class A
 {
-	static
+	private int num=50;
+	static int cnt=5;
+	
+	public static int disp()
 	{
-	System.out.println("Inside A1 static initializer");	
+		return cnt;
 	}
-}
-class B1
-{
-	static
+	public void setdata(int num)
 	{
-	System.out.println("Inside B1 static initializer");	
+		this.num=num;
 	}
-}
-class C1
-{
-	public static void display()
+	 public int getdata()
 	{
-		
+		return num;
 	}
-	static
-	{
-	System.out.println("Inside C1 static initializer");	
-	}
-}
-public class Demo1
-{
-	static
-	{
-	System.out.println("Inside Demo static initializer");	
-	}
-
-	public static void main(String[] args) 
-	{
-		System.out.println("Inside main");
-
-		A1 a=new A1();
-		B1 b=new B1();
-		C1.display();
-		
+	 static {
+			System.out.println("insid A static class");
+		}
 }
 
+class B
+{
+	private int num=100;
+	static int cnt=25;
+	
+	public static int disp()
+	{
+		return cnt;
+	}
+	public void setdata(int num)
+	{
+		this.num=num;
+	}
+	 public int getdata()
+	{
+		return num;
+	}
+	 static {
+			System.out.println("insid B static class");
+		}
+	
+}
+
+
+class C
+{
+	private int num=150;
+	static int cnt=75;
+	
+	public static int disp()
+	{
+		return cnt;
+	}
+	public void setdata(int num)
+	{
+		this.num=num;
+	}
+	 public int getdata()
+	{
+		return num;
+	}
+	 static {
+			System.out.println("insid C static class");
+		}
+}
+
+
+class Demo
+{
+	static {
+		System.out.println("insid class Demo static class");//STATIC Blocks of classes are only 
+//invoked when an instance of that class is created or any function of that class is invoked
+	}
+ public static void main(String args[])
+ {
+	 System.out.println("in main");
+	 A t=new A();
+	 B t1=new B();
+	 C t2=new C();
+	 System.out.println("result of static A class:"+A.disp());
+	 System.out.println("result of non-static A class"+t.getdata());
+	 System.out.println("result of static B class:"+B.disp());
+	 System.out.println("result of non-static B class"+t1.getdata());
+	 System.out.println("result of static C class:"+C.disp());
+	 System.out.println("result of non-static C class"+t2.getdata());
+ }
 }
