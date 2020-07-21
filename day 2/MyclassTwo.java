@@ -5,38 +5,38 @@ b) with one int argument
 c) with two int arguments
 **********************************************************************/
 
-public class Shape
+public class MyClass
 {
 	int num1;
 	int num2;
-	Shape()
+	MyClass()
 	{
-		System.out.println("default");
+		System.out.println("without any argument");
 	}
-	Shape(int num1)
+	MyClass(int num1)
 	{
 		this.num1=num1;
-		System.out.println(num1 + "  " + "in one parameter");
+		System.out.println(num1 + "  " + "with one argument");
 	}
-	Shape(int num1, int num2)
+	MyClass(int num1, int num2)
 	{
 		this.num1=num1;
 		this.num2=num2;
 		
-		System.out.println(num1 + " " + num2 + " " + "in two parameter");
+		System.out.println(num1 + " " + num2 + " " + "with two argument");
 	}
 	public static void main(String args[])
 	{
-		Shape s1 = new Shape();
-		Shape s2 = new Shape(10);
-		Shape s3= new Shape(10,20);
+		MyClass s1 = MyClasse();
+		MyClass s2 = MyClass(10);
+		MyClass s3= new MyClass(10,20);
 	}
 }
 
 /* OUTPUT
-default
-10  in one parameter
-10 20 in two parameter
+without any argument
+10  with one argument
+10 20 with two argument
 
 */
 
