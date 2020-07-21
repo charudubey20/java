@@ -5,36 +5,39 @@ b) with one int argument
 c) with two int arguments
 **********************************************************************/
 
-
-public class MyclassTwo
+public class Shape
 {
-int num;
-MyclassTwo()
-{
-System.out.println("Inside Default Constructor");
-}
-MyclassTwo(int k)
-{
-num=k;
-System.out.println("Inside Parameterized Constructor");
-}
-MyclassTwo(int m1,int m2)
+	int num1;
+	int num2;
+	Shape()
 	{
-	System.out.println("Inside Parameterized Constructor with 2 arguments");
+		System.out.println("default");
 	}
-
-	public static void main(String[] args) 
+	Shape(int num1)
 	{
-           MyclassTwo m1=new MyclassTwo();
-           MyclassTwo m2=new MyclassTwo(100);
-           new MyclassTwo(50,100);
-}
+		this.num1=num1;
+		System.out.println(num1 + "  " + "in one parameter");
+	}
+	Shape(int num1, int num2)
+	{
+		this.num1=num1;
+		this.num2=num2;
+		
+		System.out.println(num1 + " " + num2 + " " + "in two parameter");
+	}
+	public static void main(String args[])
+	{
+		Shape s1 = new Shape();
+		Shape s2 = new Shape(10);
+		Shape s3= new Shape(10,20);
+	}
 }
 
 /* OUTPUT
-Inside Default Constructor
-Inside Parameterized Constructor
-Inside Parameterized Constructor with 2 arguments
+default
+10  in one parameter
+10 20 in two parameter
+
 */
 
 
