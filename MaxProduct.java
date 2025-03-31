@@ -1,3 +1,7 @@
+/* Find the Maximum Product of Two Integers in an Array
+
+Given an integer array, find two numbers such that their product is maximum. */
+
 public class MaxProduct {
     public static void main(String[] args) {
         // Example input
